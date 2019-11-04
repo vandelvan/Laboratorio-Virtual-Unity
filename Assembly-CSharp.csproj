@@ -53,7 +53,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\avanceCarro.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
+     <Compile Include="Assets\Scripts\MenuJuegos.cs" />
+     <Compile Include="Assets\Scripts\Seguimiento.cs" />
+     <Compile Include="Assets\Scripts\Tiempo.cs" />
      <None Include="Assets\License.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/home/jorozco/UnityProj/ProyectoFisica/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
