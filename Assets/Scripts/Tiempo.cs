@@ -7,13 +7,16 @@ public class Tiempo : MonoBehaviour
 {
     public Text tiempo;
     public float cronometro;
-
-    // Update is called once per frame
+    public bool inicio;
     void Update()
     {
-        float minutes  = Mathf.Floor(cronometro/60);
-        float seconds = Mathf.RoundToInt(cronometro%60);
-        
-        tiempo.text = ""+Time.deltaTime * 10;
+        if(inicio == true){
+            cronometro += Time.deltaTime;
+            int minutos = Mathf.FloorToInt(cronometro/60F);
+            int segundos = Mathf.FloorToInt(cronometro - minutos * 60);
+            int milisegundos = Mathf.FloorToInt((cronometro-segundos)*1000);
+            string texto = string.Format("{0:00}:{1:00}:{2:00}",minutos,segundos,milisegundos);
+            tiempo.text = texto;
+        }
     }
 }

@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\avanceCarro.cs" />
+     <Compile Include="Assets\Scripts\ControlDeJuego.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\MenuJuegos.cs" />
      <Compile Include="Assets\Scripts\Seguimiento.cs" />
