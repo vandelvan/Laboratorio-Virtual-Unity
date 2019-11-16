@@ -16,9 +16,8 @@ public class ControlDeJuego : MonoBehaviour
     public GameObject panelB;
     public GameObject panelVel;
     public Button botonInicio;
-    private float m1 = 2;
+    private float m1 = 4;
     private float m2 = 6;
-    private float velocidad;
     void Start()
     {
         carro.inicio = false;
@@ -29,6 +28,8 @@ public class ControlDeJuego : MonoBehaviour
     }
     public void posicion1(string metros){
         m1 = float.Parse(metros);
+        if(m1<=1.6f)
+            m1 = 1.6f;
         if(m1 > 0 && m1 <= 100){
             cantIncorrectA.gameObject.SetActive(false);
             if(m1 < m2){
@@ -79,6 +80,7 @@ public class ControlDeJuego : MonoBehaviour
         cantIncorrectB.gameObject.SetActive(false);
         panelA.gameObject.SetActive(false);
         panelB.gameObject.SetActive(false);
+        panelVel.gameObject.SetActive(false);
         botonInicio.gameObject.SetActive(false);
         carro.inicio = true;
         cronometro.inicio = true;
@@ -88,6 +90,7 @@ public class ControlDeJuego : MonoBehaviour
         if(ms > 0){
             botonInicio.enabled = true;
             carro.ms = ms;
+            cronometro.ms = ms;
         }
         else{
             botonInicio.enabled = false;
