@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class avanceCarro : MonoBehaviour
 {
@@ -8,12 +9,14 @@ public class avanceCarro : MonoBehaviour
     public Rigidbody carro;
     public bool inicio;
     public Tiempo tiempo;
+    public Button botonSalir;
     void OnCollisionEnter(Collision objeto){
         if(objeto.collider.name == "Pared"){
             ms = 0;
             carro.transform.Rotate(0, 180, 0, Space.Self);
             tiempo.inicio = false;
             tiempo.distanciaTotal();
+            botonSalir.gameObject.SetActive(true);
         }
     }
     void OnTriggerEnter(Collider objeto){

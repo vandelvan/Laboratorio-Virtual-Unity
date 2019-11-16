@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class ControlDeJuego : MonoBehaviour
 {
     public Transform sensorA;
@@ -16,6 +17,7 @@ public class ControlDeJuego : MonoBehaviour
     public GameObject panelB;
     public GameObject panelVel;
     public Button botonInicio;
+    public Button botonSalir;
     private float m1 = 4;
     private float m2 = 6;
     void Start()
@@ -82,6 +84,7 @@ public class ControlDeJuego : MonoBehaviour
         panelB.gameObject.SetActive(false);
         panelVel.gameObject.SetActive(false);
         botonInicio.gameObject.SetActive(false);
+        botonSalir.gameObject.SetActive(false);
         carro.inicio = true;
         cronometro.inicio = true;
     }
@@ -95,5 +98,8 @@ public class ControlDeJuego : MonoBehaviour
         else{
             botonInicio.enabled = false;
         }
+    }
+    public void salir(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + -1);
     }
 }
