@@ -55,4 +55,9 @@ public class Tiempo : MonoBehaviour
     public void distanciaTotal(){
         distancia.text = "x = " + ((ms * cronometro) - 1.6f).ToString() + "m";
     }
+
+    /*FUNCIONES CAIDA LIBRE*/
+    public void velocidad(){
+        distancia.text = "Vf = " + ((9.8f * cronometro)).ToString() + "m/s";
+    }
 }

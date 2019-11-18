@@ -282,6 +282,8 @@
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
 "Assets/Scripts/avanceCarro.cs"
+"Assets/Scripts/caidaPelota.cs"
+"Assets/Scripts/ControlCaida.cs"
 "Assets/Scripts/ControlDeJuego.cs"
 "Assets/Scripts/Menu.cs"
 "Assets/Scripts/MenuJuegos.cs"

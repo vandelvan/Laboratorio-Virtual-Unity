@@ -100,6 +100,6 @@ public class ControlDeJuego : MonoBehaviour
         }
     }
     public void salir(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + -1);
+        SceneManager.LoadScene("Menu");
     }
 }
