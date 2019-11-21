@@ -24,7 +24,7 @@ public class ControlCaida : MonoBehaviour
     }
     public void setAltura(string metros){
         m1 = float.Parse(metros);
-        if(m1 > 1 && m1 <= 100){
+        if(m1 >= 1 && m1 <= 100){
             cantIncorrecta.gameObject.SetActive(false);
             pelota.setAltura(m1);
             inputAltura.enabled = true;
